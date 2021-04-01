@@ -10,17 +10,19 @@ namespace ExamAppMvc.Models.DbModel
     {   public SubjectClassTopic()
         {
             UserSubjectTopicClasses = new List<Exam>();
+            Questions = new List<Question>();
         }
         [Key]
         public int Id { get; set; }
+        public string Topic { get; set; }
         public int SubjectId { get; set; }
         public int ClassId { get; set; }
-        public int TopicId { get; set; }
+        
         public virtual Subject Subject { get; set; }
         public virtual Class Class { get; set; }
-        public virtual Topic Topic { get; set; }
+      
         public virtual List<Exam> UserSubjectTopicClasses { get; set; }
-
+        public virtual List<Question> Questions { get; set; }
 
     }
 }
