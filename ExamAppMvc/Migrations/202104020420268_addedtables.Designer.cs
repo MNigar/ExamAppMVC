@@ -7,13 +7,13 @@ namespace ExamAppMvc.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class tbale : IMigrationMetadata
+    public sealed partial class addedtables : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(tbale));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addedtables));
         
         string IMigrationMetadata.Id
         {
-            get { return "202104011423388_tbale"; }
+            get { return "202104020420268_addedtables"; }
         }
         
         string IMigrationMetadata.Source

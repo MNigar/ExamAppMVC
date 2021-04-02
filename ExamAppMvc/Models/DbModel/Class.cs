@@ -13,5 +13,6 @@ namespace ExamAppMvc.Models.DbModel
          }
     
         public virtual List<SubjectClassTopic> SubjectClassTopics { get; set; }
+
 }
 }

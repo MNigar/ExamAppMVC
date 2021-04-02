@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "SubMenu";
+}
+
+<h2>SubMenu</h2>
+
+@foreach (var i in ViewBag.Class)
+{
+    
+    <div class="card">
+        <a href="@Url.Action("Topic","Menu",new { id=i.Id})" style="text-decoration: none; color: black;">
+            <div class="container">
+                <h4><b>@i.Name</b></h4>
+            </div>
+        </a>
+    </div>
+}

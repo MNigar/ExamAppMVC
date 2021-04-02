@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "SubMenu";
+}
+
+<h2>SubMenu</h2>
+
+@foreach (var i in ViewBag.Class)
+{
+    <div class="col-md-3 col-sm-6 hero-feature">
+        <a href="@Url.Action("Topic","Menu",new { id=i.Id})" style="text-decoration: none; color: black;">
+            <div class="thumbnail">
+                @*<img src="/images/Main/antonym.jpeg" alt="Antonimlər">*@
+                <div class="caption">
+                    <h3>@i.Name</h3>
+                </div>
+            </div>
+        </a>
+    </div>
+
+}

@@ -127,39 +127,24 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Manage\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Manage\Controllers\AnswersController.cs" />
     <Compile Include="Areas\Manage\Controllers\ClassesController.cs" />
     <Compile Include="Areas\Manage\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Manage\Controllers\MenuController.cs" />
+    <Compile Include="Areas\Manage\Controllers\QuestionsController.cs" />
     <Compile Include="Areas\Manage\Controllers\SubjectClassTopicsController.cs" />
     <Compile Include="Areas\Manage\Controllers\SubjectsController.cs" />
     <Compile Include="Context\ExamContext.cs" />
+    <Compile Include="Controllers\AnswersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104011200129_addedtable.cs" />
-    <Compile Include="Migrations\202104011200129_addedtable.Designer.cs">
-      <DependentUpon>202104011200129_addedtable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104011202158_addedtablnew.cs" />
-    <Compile Include="Migrations\202104011202158_addedtablnew.Designer.cs">
-      <DependentUpon>202104011202158_addedtablnew.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104011203414_addedtablnews.cs" />
-    <Compile Include="Migrations\202104011203414_addedtablnews.Designer.cs">
-      <DependentUpon>202104011203414_addedtablnews.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104011406475_deletetopictable.cs" />
-    <Compile Include="Migrations\202104011406475_deletetopictable.Designer.cs">
-      <DependentUpon>202104011406475_deletetopictable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104011423388_tbale.cs" />
-    <Compile Include="Migrations\202104011423388_tbale.Designer.cs">
-      <DependentUpon>202104011423388_tbale.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104011435589_tbalesk.cs" />
-    <Compile Include="Migrations\202104011435589_tbalesk.Designer.cs">
-      <DependentUpon>202104011435589_tbalesk.cs</DependentUpon>
+    <Compile Include="Migrations\202104020420268_addedtables.cs" />
+    <Compile Include="Migrations\202104020420268_addedtables.Designer.cs">
+      <DependentUpon>202104020420268_addedtables.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DbModel\Answer.cs" />
@@ -167,11 +152,13 @@
     <Compile Include="Models\DbModel\Question.cs" />
     <Compile Include="Models\DbModel\Subject.cs" />
     <Compile Include="Models\DbModel\Class.cs" />
+    <Compile Include="Models\DbModel\SubjectClass.cs" />
     <Compile Include="Models\DbModel\SubjectClassTopic.cs" />
     <Compile Include="Models\DbModel\Topic.cs" />
     <Compile Include="Models\DbModel\User.cs" />
     <Compile Include="Models\DbModel\Exam.cs" />
     <Compile Include="Models\DbModel\UserAnswer.cs" />
+    <Compile Include="Models\ViewModel\QuestionAnswerViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2082,6 +2069,19 @@
     <Content Include="Areas\Manage\Views\SubjectClassTopics\Details.cshtml" />
     <Content Include="Areas\Manage\Views\SubjectClassTopics\Edit.cshtml" />
     <Content Include="Areas\Manage\Views\SubjectClassTopics\Index.cshtml" />
+    <Content Include="Areas\Manage\Views\Questions\Create.cshtml" />
+    <Content Include="Areas\Manage\Views\Questions\Delete.cshtml" />
+    <Content Include="Areas\Manage\Views\Questions\Details.cshtml" />
+    <Content Include="Areas\Manage\Views\Questions\Edit.cshtml" />
+    <Content Include="Areas\Manage\Views\Questions\Index.cshtml" />
+    <Content Include="Areas\Manage\Views\Menu\Index.cshtml" />
+    <Content Include="Areas\Manage\Views\Menu\SubMenu.cshtml" />
+    <Content Include="Areas\Manage\Views\Menu\Topic.cshtml" />
+    <Content Include="Areas\Manage\Views\Answers\Create.cshtml" />
+    <Content Include="Areas\Manage\Views\Answers\Delete.cshtml" />
+    <Content Include="Areas\Manage\Views\Answers\Details.cshtml" />
+    <Content Include="Areas\Manage\Views\Answers\Edit.cshtml" />
+    <Content Include="Areas\Manage\Views\Answers\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -2111,6 +2111,14 @@
     <Content Include="Views\Users\Create.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Users\Login.cshtml" />
+    <Content Include="Views\Menu\Index.cshtml" />
+    <Content Include="Views\Menu\SubMenu.cshtml" />
+    <Content Include="Views\Menu\Topic.cshtml" />
+    <Content Include="Views\Answers\Create.cshtml" />
+    <Content Include="Views\Answers\Delete.cshtml" />
+    <Content Include="Views\Answers\Details.cshtml" />
+    <Content Include="Views\Answers\Edit.cshtml" />
+    <Content Include="Views\Answers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2131,23 +2139,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202104011200129_addedtable.resx">
-      <DependentUpon>202104011200129_addedtable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104011202158_addedtablnew.resx">
-      <DependentUpon>202104011202158_addedtablnew.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104011203414_addedtablnews.resx">
-      <DependentUpon>202104011203414_addedtablnews.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104011406475_deletetopictable.resx">
-      <DependentUpon>202104011406475_deletetopictable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104011423388_tbale.resx">
-      <DependentUpon>202104011423388_tbale.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104011435589_tbalesk.resx">
-      <DependentUpon>202104011435589_tbalesk.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104020420268_addedtables.resx">
+      <DependentUpon>202104020420268_addedtables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

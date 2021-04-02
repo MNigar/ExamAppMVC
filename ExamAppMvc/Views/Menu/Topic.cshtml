@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Topic";
+}
+
+<h2>Topic</h2>
+
+@foreach (var i in ViewBag.topic)
+{
+   
+    <div class="card">
+        <a href="@Url.Action("Index","Answers",new { id=i.Id})" style="text-decoration: none; color: black;">
+            <div class="container">
+                <h4><b>@i.Topic</b></h4>
+            </div>
+        </a>
+    </div>
+}

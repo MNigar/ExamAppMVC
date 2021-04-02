@@ -1,0 +1,75 @@
+﻿@model IEnumerable<ExamAppMvc.Models.DbModel.Answer>
+
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    .upperleft {
+        display: block;
+        text-align: left;
+        vertical-align: top;
+    }
+</style>
+<h2>Index</h2>
+@using (Html.BeginForm())
+
+{
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <div class="container">
+
+        <table class="table table-bordered">
+
+
+            @foreach (var item in Model)
+            {
+                <thead>
+                    <tr>
+
+                        <th class="col-md-12">
+                            <input type="text" disabled value=" @item.Question.Text">
+
+                            <input type="hidden" disabled value=" @item.Question.Id" name="QuestionId">
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+
+                        <td>
+                            @foreach (var a in item.Question.Answers)
+                            {
+
+                                @*@Html.DisplayFor(modelItem => a.Text)*@
+                                @*<label>
+                @a.Text
+            </label>*@
+                                <div class="upperleft">
+                                    <input type="radio" value="@a.Id" name="Text" />@a.Text  <br />
+
+                                </div>
+
+
+
+                            }
+                        </td>
+                            <!--<td>-->
+                                @*@Html.ActionLink("Save", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })*@
+                            <!--</td>-->
+
+                        </tr>
+
+                    </tbody>
+                    }
+
+            </table>
+    </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>}
+
