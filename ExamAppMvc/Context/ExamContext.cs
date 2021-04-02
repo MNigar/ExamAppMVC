@@ -9,7 +9,7 @@ namespace ExamAppMvc.Context
 {
     public class ExamContext:DbContext
     {
-        public ExamContext() : base("ExamApp") { }
+        public ExamContext() : base("ExamApp1") { }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Answer> Answers { get; set; }
         public virtual DbSet<Class> Classes { get; set; }

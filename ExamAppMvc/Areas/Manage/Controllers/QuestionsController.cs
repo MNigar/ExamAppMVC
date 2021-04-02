@@ -46,6 +46,7 @@ namespace ExamAppMvc.Areas.Manage.Controllers
             ViewBag.AnswerList = new List<Answer>();
             var variant = "ABCD";
             ViewBag.variant = variant.ToList();
+            ViewBag.Subject = id;
             return View(model);
         }
 
@@ -53,9 +54,11 @@ namespace ExamAppMvc.Areas.Manage.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+
         public ActionResult Create( QuestionAnswerViewModel question)
         {
+            
+
             if (ModelState.IsValid)
             {
               
@@ -64,13 +67,13 @@ namespace ExamAppMvc.Areas.Manage.Controllers
         
 
 
-                foreach (var i in ViewBag.variant)
-                {
-                    question.Answer.QuestionId = question.Question.Id;
-                    db.Answers.Add(question.Answer);
-                    db.SaveChanges();
+                //foreach (var i in ViewBag.variant)
+                //{
+                //    question.Answer.QuestionId = question.Question.Id;
+                //    db.Answers.Add(question.Answer);
+                //    db.SaveChanges();
 
-                }
+                //}
 
                 return RedirectToAction("Index");
             }

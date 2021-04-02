@@ -81,13 +81,7 @@ D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.csproj.CoreCo
 D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.csproj.CopyComplete
 D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.dll
 D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.pdb
-D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedtable.resources
 D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.csproj.GenerateResource.cache
-D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedtablnew.resources
-D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedtablnews.resources
-D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.deletetopictable.resources
-D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.tbale.resources
-D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.tbalesk.resources
 D:\C#course\.net mvc\ExamAppMvc\ExamAppMvc\bin\ExamAppMvc.dll.config
 D:\C#course\.net mvc\ExamAppMvc\ExamAppMvc\bin\ExamAppMvc.dll
 D:\C#course\.net mvc\ExamAppMvc\ExamAppMvc\bin\ExamAppMvc.pdb
@@ -173,3 +167,4 @@ D:\C#course\.net mvc\ExamAppMvc\ExamAppMvc\obj\Debug\ExamAppMvc.dll
 D:\C#course\.net mvc\ExamAppMvc\ExamAppMvc\obj\Debug\ExamAppMvc.pdb
 D:\C#course\.net mvc\ExamAppMvc\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedtables.resources
 D:\C#course\.net mvc\ExamAppMvc\ExamAppMvc\obj\Debug\ExamAppMvc.csproj.GenerateResource.cache
+D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedtables.resources

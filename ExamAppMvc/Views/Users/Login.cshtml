@@ -50,7 +50,7 @@
 
                             <div class="form-group d-flex">
                                 @*<input type="password" class="form-control rounded-left" placeholder="Password" name="Password" required>*@
-                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control rounded-left", @placeholder = "Password" } })
+                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control rounded-left", @placeholder = "Password",@type="password" } })
                                 @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
 
                             </div>

@@ -122,27 +122,33 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="@Url.Action("Index","Subjects")">
+                <a class="nav-link" href="@Url.Action("Index","Subjects",new { Area = "Manage" })">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Subject</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="@Url.Action("Index","Classes")">
+                <a class="nav-link" href="@Url.Action("Index","Classes",new { Area = "Manage" })">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Classes</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="@Url.Action("Index","SubjectClassTopics")">
+                <a class="nav-link" href="@Url.Action("Index","SubjectClassTopics",new { Area = "Manage" })">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Topic</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="@Url.Action("Index","Questions")">
+                <a class="nav-link" href="@Url.Action("Index","Questions",new { Area = "Manage" })">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Question</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Index","Menu",new { Area = "Manage" })">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Add Question</span>
                 </a>
             </li>
             <!-- Nav Item - Tables -->

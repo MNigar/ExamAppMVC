@@ -17,15 +17,7 @@ namespace ExamAppMvc.Controllers
         private ExamContext db = new ExamContext();
 
   
-        public ActionResult Index()
-        {  
-            if (Session["username"].ToString() == "admin")
-            {
-                return View("~/Areas/Manage/Views/Home/Index.cshtml");
-            }
-            return View();
-        }
-
+       
        
         public ActionResult Create()
         {
@@ -81,7 +73,15 @@ namespace ExamAppMvc.Controllers
                         {
                             Session["email"] = check.Email;
                             Session["username"] = check.Name;
-                        return RedirectToAction("Index", "Users");
+                        if (Session["username"].ToString() == "admin")
+                        {
+                            return View("~/Areas/Manage/Views/Home/Index.cshtml");
+                        }
+                        else
+                        {
+                            return RedirectToAction("Index", "Menu");
+                        }
+                       
                         }
 
                     }
