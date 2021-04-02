@@ -131,6 +131,8 @@
     <Compile Include="Areas\Manage\Controllers\ClassesController.cs" />
     <Compile Include="Areas\Manage\Controllers\HomeController.cs" />
     <Compile Include="Areas\Manage\Controllers\MenuController.cs" />
+    <Compile Include="Areas\Manage\Controllers\NewUserAnswersController.cs" />
+    <Compile Include="Areas\Manage\Controllers\QuestionAnswersController.cs" />
     <Compile Include="Areas\Manage\Controllers\QuestionsController.cs" />
     <Compile Include="Areas\Manage\Controllers\SubjectClassTopicsController.cs" />
     <Compile Include="Areas\Manage\Controllers\SubjectsController.cs" />
@@ -138,6 +140,7 @@
     <Compile Include="Controllers\AnswersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\QuestionAnswersController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Filter\Auth.cs" />
     <Compile Include="Global.asax.cs">
@@ -147,10 +150,28 @@
     <Compile Include="Migrations\202104020420268_addedtables.Designer.cs">
       <DependentUpon>202104020420268_addedtables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104021348161_added questionanswer.cs" />
+    <Compile Include="Migrations\202104021348161_added questionanswer.Designer.cs">
+      <DependentUpon>202104021348161_added questionanswer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104021356481_added questionanswerg.cs" />
+    <Compile Include="Migrations\202104021356481_added questionanswerg.Designer.cs">
+      <DependentUpon>202104021356481_added questionanswerg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104021418583_added quiz.cs" />
+    <Compile Include="Migrations\202104021418583_added quiz.Designer.cs">
+      <DependentUpon>202104021418583_added quiz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104021426327_added quizs.cs" />
+    <Compile Include="Migrations\202104021426327_added quizs.Designer.cs">
+      <DependentUpon>202104021426327_added quizs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DbModel\Answer.cs" />
     <Compile Include="Models\DbModel\BaseClass.cs" />
+    <Compile Include="Models\DbModel\NewUserAnswer.cs" />
     <Compile Include="Models\DbModel\Question.cs" />
+    <Compile Include="Models\DbModel\QuestionAnswer.cs" />
     <Compile Include="Models\DbModel\Subject.cs" />
     <Compile Include="Models\DbModel\Class.cs" />
     <Compile Include="Models\DbModel\SubjectClass.cs" />
@@ -2083,6 +2104,16 @@
     <Content Include="Areas\Manage\Views\Answers\Details.cshtml" />
     <Content Include="Areas\Manage\Views\Answers\Edit.cshtml" />
     <Content Include="Areas\Manage\Views\Answers\Index.cshtml" />
+    <Content Include="Areas\Manage\Views\QuestionAnswers\Create.cshtml" />
+    <Content Include="Areas\Manage\Views\QuestionAnswers\Delete.cshtml" />
+    <Content Include="Areas\Manage\Views\QuestionAnswers\Details.cshtml" />
+    <Content Include="Areas\Manage\Views\QuestionAnswers\Edit.cshtml" />
+    <Content Include="Areas\Manage\Views\QuestionAnswers\Index.cshtml" />
+    <Content Include="Areas\Manage\Views\NewUserAnswers\Create.cshtml" />
+    <Content Include="Areas\Manage\Views\NewUserAnswers\Delete.cshtml" />
+    <Content Include="Areas\Manage\Views\NewUserAnswers\Details.cshtml" />
+    <Content Include="Areas\Manage\Views\NewUserAnswers\Edit.cshtml" />
+    <Content Include="Areas\Manage\Views\NewUserAnswers\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -2120,6 +2151,11 @@
     <Content Include="Views\Answers\Details.cshtml" />
     <Content Include="Views\Answers\Edit.cshtml" />
     <Content Include="Views\Answers\Index.cshtml" />
+    <Content Include="Views\QuestionAnswers\Create.cshtml" />
+    <Content Include="Views\QuestionAnswers\Delete.cshtml" />
+    <Content Include="Views\QuestionAnswers\Details.cshtml" />
+    <Content Include="Views\QuestionAnswers\Edit.cshtml" />
+    <Content Include="Views\QuestionAnswers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2142,6 +2178,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202104020420268_addedtables.resx">
       <DependentUpon>202104020420268_addedtables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104021348161_added questionanswer.resx">
+      <DependentUpon>202104021348161_added questionanswer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104021356481_added questionanswerg.resx">
+      <DependentUpon>202104021356481_added questionanswerg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104021418583_added quiz.resx">
+      <DependentUpon>202104021418583_added quiz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104021426327_added quizs.resx">
+      <DependentUpon>202104021426327_added quizs.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

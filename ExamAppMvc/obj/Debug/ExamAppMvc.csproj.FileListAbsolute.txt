@@ -168,3 +168,7 @@ D:\C#course\.net mvc\ExamAppMvc\ExamAppMvc\obj\Debug\ExamAppMvc.pdb
 D:\C#course\.net mvc\ExamAppMvc\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedtables.resources
 D:\C#course\.net mvc\ExamAppMvc\ExamAppMvc\obj\Debug\ExamAppMvc.csproj.GenerateResource.cache
 D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedtables.resources
+D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedquestionanswer.resources
+D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedquestionanswerg.resources
+D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedquiz.resources
+D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedquizs.resources

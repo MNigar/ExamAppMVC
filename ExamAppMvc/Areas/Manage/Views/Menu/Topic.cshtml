@@ -8,7 +8,7 @@
 @foreach (var i in ViewBag.topic)
 {
     <div class="col-md-3 col-sm-6 hero-feature">
-        <a href="@Url.Action("Create","Questions",new { id=i.Id})" style="text-decoration: none; color: black;">
+        <a href="@Url.Action("Create","QuestionAnswers",new { id=i.Id})" style="text-decoration: none; color: black;">
             <div class="thumbnail">
                 @*<img src="/images/Main/antonym.jpeg" alt="Antonimlər">*@
                 <div class="caption">

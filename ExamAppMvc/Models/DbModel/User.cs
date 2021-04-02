@@ -11,6 +11,7 @@ namespace ExamAppMvc.Models.DbModel
         {
             UserSubjectTopicClasses = new List<Exam>();
             UserAnswers = new List<UserAnswer>();
+            NewUserAnswers = new List<NewUserAnswer>();
         }
         [Required]
         [EmailAddress]
@@ -19,6 +20,8 @@ namespace ExamAppMvc.Models.DbModel
         public string Password { get; set; }
         public virtual List <Exam> UserSubjectTopicClasses { get; set; }
         public virtual List<UserAnswer> UserAnswers { get; set; }
+        public virtual List<NewUserAnswer> NewUserAnswers { get; set; }
+
 
     }
 }

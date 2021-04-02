@@ -1,0 +1,66 @@
+﻿@model ExamAppMvc.Models.DbModel.QuestionAnswer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>QuestionAnswer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SubjectClassTopic.Topic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubjectClassTopic.Topic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Text)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Text)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Answer1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Answer1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Answer2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Answer2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Answer3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Answer3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrueAnswer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrueAnswer)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

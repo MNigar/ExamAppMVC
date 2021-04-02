@@ -11,6 +11,7 @@ namespace ExamAppMvc.Models.DbModel
         {
             UserSubjectTopicClasses = new List<Exam>();
             Questions = new List<Question>();
+            QuestionAnswer = new List<QuestionAnswer>();
         }
         [Key]
         public int Id { get; set; }
@@ -23,6 +24,6 @@ namespace ExamAppMvc.Models.DbModel
       
         public virtual List<Exam> UserSubjectTopicClasses { get; set; }
         public virtual List<Question> Questions { get; set; }
-
+        public virtual List<QuestionAnswer> QuestionAnswer { get; set; }
     }
 }

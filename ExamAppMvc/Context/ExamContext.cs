@@ -19,7 +19,9 @@ namespace ExamAppMvc.Context
         public virtual DbSet<SubjectClassTopic> SubjectClassTopics { get; set; }
         public virtual DbSet<Topic> Topics { get; set; }
         public virtual DbSet<UserAnswer> UserAnswers { get; set; }
+        public virtual DbSet<QuestionAnswer> QuestionAnswers { get; set; }
+        public virtual DbSet<NewUserAnswer> NewUserAnswers { get; set; }
 
-
+ 
     }
 }

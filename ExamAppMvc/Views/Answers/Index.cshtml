@@ -45,29 +45,29 @@
 
 
                                 @*<div class="upperleft">
-                                    <input type="radio" value="@a.Id" name="@item.Id" />@a.Text  <br />
+                                        <input type="radio" value="@a.Id" name="@item.Id" />@a.Text  <br />
 
-                                </div>*@
+                                    </div>*@
 
-                            <div id="@item.Id">
-                               <input type="radio" value="@a.Id" name="Id">@a.Text  <br />
+                                <div id="@item.Id">
+                                    <input type="radio" value="@a.Id" name="Id[@item.Id]">@a.Text  <br />
 
-                            </div>
+                                </div>
 
                             }
                         </td>
-                          
 
-                        </tr>
 
-                    </tbody>
-                    }
+                    </tr>
 
-            </table>
+                </tbody>
+            }
+
+        </table>
     </div>
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Save" class="btn btn-default" />
-                </div>
-            </div>}
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>}
 
