@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ExamAppMvc.Models.DbModel.Answer>
+﻿@model ExamAppMvc.Models.DbModel.SubjectClassTopic
 
 @{
     ViewBag.Title = "Index";
@@ -11,63 +11,87 @@
     }
 </style>
 <h2>Index</h2>
-@using (Html.BeginForm())
+@using (Html.BeginForm("Result", "Answers", new { id = Model.Id}))
 
 {
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <div class="container">
 
-        <table class="table table-bordered">
+    int i = 1;
 
+    foreach (var item in Model.QuestionAnswer.ToList())
+    {
 
-            @foreach (var item in @ViewBag.Question)
-            {
-                <thead>
-                    <tr>
+        <div class="question">
+            <div class="title">
+                @i)	@item.Text
+            </div>
+            <ul class="answers">
+                @if (item.A != null)
+                {
 
-                        <th class="col-md-12">
-                            <input type="text" disabled value=" @item.Text">
+                    <li>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="@item.ID" id="optionsRadios1" value="A" />
+                                A) @item.A
+                            </label>
+                        </div>
+                    </li>
+                }
+                @if (item.B != null)
+                {
 
-                            <input type="hidden" disabled value=" @item.Id" name="QuestionId">
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
+                    <li>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="@item.ID" id="optionsRadios1" value="B" />
+                                B) @item.B
+                            </label>
+                        </div>
+                    </li>
+                }
+                @if (item.C != null)
+                {
 
-                        <td>
-                            @foreach (var a in item.Answers)
-                            {
+                    <li>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="@item.ID" id="optionsRadios1" value="C" />
+                                C) @item.C
+                            </label>
+                        </div>
+                    </li>
+                }
+                @if (item.D != null)
+                {
 
+                    <li>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="@item.ID" id="optionsRadios1" value="D" />
+                                D) @item.D
+                            </label>
+                        </div>
+                    </li>
+                }
+                @*@if (item.E != null)
+                {
 
+                    <li>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="@item.ID" id="optionsRadios1" value="E" />
+                                E) @item.E
+                            </label>
+                        </div>
+                    </li>
+                }*@
 
-
-                                @*<div class="upperleft">
-                                        <input type="radio" value="@a.Id" name="@item.Id" />@a.Text  <br />
-
-                                    </div>*@
-
-                                <div id="@item.Id">
-                                    <input type="radio" value="@a.Id" name="Id[@item.Id]">@a.Text  <br />
-
-                                </div>
-
-                            }
-                        </td>
-
-
-                    </tr>
-
-                </tbody>
-            }
-
-        </table>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Save" class="btn btn-default" />
+            </ul>
         </div>
-    </div>}
+        i++;
+    }
+    <button type="submit" class="btn btn-primary">Tamamla</button>
+
+
+}
 

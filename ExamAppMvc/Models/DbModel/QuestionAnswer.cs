@@ -12,10 +12,12 @@ namespace ExamAppMvc.Models.DbModel
         [Key]
         public int ID { get; set; }
         public string Text { get; set; }
-        public string Answer1 { get; set; }
-        public string Answer2 { get; set; }
-        public string Answer3 { get; set; }
+        public string A { get; set; }
+        public string B { get; set; }
+        public string C { get; set; }
+        public string D { get; set; }
         public string TrueAnswer { get; set; }
+        public int Point { get; set; }
         public int SubjectClassTopicId { get; set; }
         public virtual SubjectClassTopic SubjectClassTopic { get; set; }
 

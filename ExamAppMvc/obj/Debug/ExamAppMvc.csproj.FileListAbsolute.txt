@@ -76,7 +76,6 @@ D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\bin\System.Web.WebPages.Razor.xml
 D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\bin\Newtonsoft.Json.xml
 D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\bin\Antlr3.Runtime.pdb
 D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.csprojAssemblyReference.cache
 D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.csproj.CoreCompileInputs.cache
 D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.csproj.CopyComplete
 D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.dll
@@ -172,3 +171,7 @@ D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.ad
 D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedquestionanswerg.resources
 D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedquiz.resources
 D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedquizs.resources
+D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.csprojAssemblyReference.cache
+D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedresulttable.resources
+D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedpointfield.resources
+D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedfields.resources

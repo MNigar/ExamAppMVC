@@ -18,10 +18,15 @@ namespace ExamAppMvc.Controllers
         // GET: Answers
         public ActionResult Index(int? id)
         {
-            var answers = db.Answers.Include(a => a.Question).Where(x=>x.Question.SubjectClassTopicId==id);
-            ViewBag.Question = db.Questions.Where(x=>x.SubjectClassTopicId==id).ToList();
-           
-            return View(answers.ToList());
+            //var answers = db.Answers.Include(a => a.Question).Where(x=>x.Question.SubjectClassTopicId==id);
+            //ViewBag.Question = db.Questions.Where(x=>x.SubjectClassTopicId==id).ToList();
+            SubjectClassTopic topic = db.SubjectClassTopics.Find(id);
+            if (topic == null)
+            {
+                return HttpNotFound();
+            }
+            return View(topic);
+          
         }
         [HttpPost]
         public ActionResult Index(Answer answer)
@@ -139,6 +144,54 @@ namespace ExamAppMvc.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
+        public ActionResult Result(int id,Dictionary<string,object> sual)
+        {
+            SubjectClassTopic topic = db.SubjectClassTopics.Find(id);
+            //Request.
+            Request.Form.CopyTo(sual);
+            Models.DbModel.Result result = new Models.DbModel.Result();
+            //Dictionary<string, string> sual = new Dictionary<string, string>();
+            //foreach (string key in HttpContext.Request.Form.Keys)
+            //{
+            //    sual.Add(key, Request.Form.Get(key));
+            //}
+            foreach (QuestionAnswer question in topic.QuestionAnswer.ToList())
+            {       
+                if (sual.ContainsKey(question.ID.ToString()))
+                {
+                    if (sual[question.ID.ToString()].ToString() == question.TrueAnswer)
+                    {
+                        result.TrueAnswers++;
+                        result.TotalPoint += question.Point;
+                    }
+                    else
+                    {
+                        result.FalseAnswers++;
+                    }
+                }
+
+                else
+                {
+                    result.EmptyAnswers++;
+                }
+            }
+            //string[] keys = Request.Form.AllKeys;
+            //for (int i = 0; i < keys.Length; i++)
+            //{
+            //    output += keys[i] + ": " + Request.Form.Get(i) + "<br>"; 
+            //}
+
+            //foreach (KeyValuePair<int,string> item in sual)
+            //{
+            //    output += item.Key + ": " + item.Value + "<br>";
+            //}
+
+            return View(result);
+        }
+
+
 
         protected override void Dispose(bool disposing)
         {

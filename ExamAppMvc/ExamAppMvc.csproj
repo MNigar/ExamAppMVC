@@ -141,6 +141,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\QuestionAnswersController.cs" />
+    <Compile Include="Controllers\Result.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Filter\Auth.cs" />
     <Compile Include="Global.asax.cs">
@@ -166,12 +167,25 @@
     <Compile Include="Migrations\202104021426327_added quizs.Designer.cs">
       <DependentUpon>202104021426327_added quizs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104140720380_added result table.cs" />
+    <Compile Include="Migrations\202104140720380_added result table.Designer.cs">
+      <DependentUpon>202104140720380_added result table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104140729028_added point field.cs" />
+    <Compile Include="Migrations\202104140729028_added point field.Designer.cs">
+      <DependentUpon>202104140729028_added point field.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104140742332_added fields.cs" />
+    <Compile Include="Migrations\202104140742332_added fields.Designer.cs">
+      <DependentUpon>202104140742332_added fields.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DbModel\Answer.cs" />
     <Compile Include="Models\DbModel\BaseClass.cs" />
     <Compile Include="Models\DbModel\NewUserAnswer.cs" />
     <Compile Include="Models\DbModel\Question.cs" />
     <Compile Include="Models\DbModel\QuestionAnswer.cs" />
+    <Compile Include="Models\DbModel\Result.cs" />
     <Compile Include="Models\DbModel\Subject.cs" />
     <Compile Include="Models\DbModel\Class.cs" />
     <Compile Include="Models\DbModel\SubjectClass.cs" />
@@ -2156,6 +2170,7 @@
     <Content Include="Views\QuestionAnswers\Details.cshtml" />
     <Content Include="Views\QuestionAnswers\Edit.cshtml" />
     <Content Include="Views\QuestionAnswers\Index.cshtml" />
+    <Content Include="Views\Answers\Result.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2190,6 +2205,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104021426327_added quizs.resx">
       <DependentUpon>202104021426327_added quizs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104140720380_added result table.resx">
+      <DependentUpon>202104140720380_added result table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104140729028_added point field.resx">
+      <DependentUpon>202104140729028_added point field.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104140742332_added fields.resx">
+      <DependentUpon>202104140742332_added fields.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
