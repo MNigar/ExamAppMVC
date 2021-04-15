@@ -148,8 +148,17 @@ namespace ExamAppMvc.Controllers
         [HttpPost]
         public ActionResult Result(int id,Dictionary<string,object> sual)
         {
-            SubjectClassTopic topic = db.SubjectClassTopics.Find(id);
+            SubjectClassTopic topic = db.SubjectClassTopics.Find(id)
+                ;
             //Request.
+
+
+            var path=Request.FilePath;
+            var method = Request.HttpMethod;      
+            var y = Request.Headers.Count;
+
+
+
             Request.Form.CopyTo(sual);
             Models.DbModel.Result result = new Models.DbModel.Result();
             //Dictionary<string, string> sual = new Dictionary<string, string>();
@@ -161,6 +170,10 @@ namespace ExamAppMvc.Controllers
             {       
                 if (sual.ContainsKey(question.ID.ToString()))
                 {
+                    result.QuestionId = id;
+                    result.SubjectId = topic.SubjectId;
+                    result.SubjectClassTopicId = topic.Id;
+
                     if (sual[question.ID.ToString()].ToString() == question.TrueAnswer)
                     {
                         result.TrueAnswers++;

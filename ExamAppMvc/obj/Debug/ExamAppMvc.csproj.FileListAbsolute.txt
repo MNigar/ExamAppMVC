@@ -175,3 +175,10 @@ D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.csprojAssembl
 D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedresulttable.resources
 D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedpointfield.resources
 D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedfields.resources
+D:\C#course\.net mvc\ExamAppMvc\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedquestionanswer.resources
+D:\C#course\.net mvc\ExamAppMvc\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedquestionanswerg.resources
+D:\C#course\.net mvc\ExamAppMvc\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedquiz.resources
+D:\C#course\.net mvc\ExamAppMvc\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedquizs.resources
+D:\C#course\.net mvc\ExamAppMvc\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedresulttable.resources
+D:\C#course\.net mvc\ExamAppMvc\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedpointfield.resources
+D:\C#course\.net mvc\ExamAppMvc\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedfields.resources

@@ -7,8 +7,15 @@ using System.Web;
 namespace ExamAppMvc.Models.DbModel
 {
     public class Result
-    {   [Key]
+    {[Key]
         public int Id { get; set; }
+        public int SubjectClassTopicId { get; set; }
+        public int UserId { get; set; }
+        public int SubjectId { get; set; }
+        public int QuestionId { get; set; } 
+        public virtual Subject Subject {get;set; }
+        public virtual SubjectClassTopic SubjectClassTopic { get; set; }
+        public virtual Question Question { get; set; }
         public int TrueAnswers { get; set; }
         public int FalseAnswers { get; set; }
         public int EmptyAnswers { get; set; }
