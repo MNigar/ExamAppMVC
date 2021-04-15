@@ -13,9 +13,9 @@ namespace ExamAppMvc.Models.DbModel
         public int UserId { get; set; }
         public int SubjectId { get; set; }
         public int QuestionId { get; set; } 
-        public virtual Subject Subject {get;set; }
+       
         public virtual SubjectClassTopic SubjectClassTopic { get; set; }
-        public virtual Question Question { get; set; }
+       
         public int TrueAnswers { get; set; }
         public int FalseAnswers { get; set; }
         public int EmptyAnswers { get; set; }

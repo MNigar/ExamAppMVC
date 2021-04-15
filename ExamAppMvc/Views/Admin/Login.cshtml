@@ -40,7 +40,7 @@
                             <h4>User</h4>
                             <hr />
                             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                            
+
                             <div class="form-group">
                                 @*<input type="text" class="form-control rounded-left" placeholder="Username" name="Email" required>*@
                                 @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control rounded-left", @placeholder = "Email" } })
@@ -50,7 +50,7 @@
 
                             <div class="form-group d-flex">
                                 @*<input type="password" class="form-control rounded-left" placeholder="Password" name="Password" required>*@
-                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control rounded-left", @placeholder = "Password",@type="password" } })
+                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control rounded-left", @placeholder = "Password", @type = "password" } })
                                 @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
 
                             </div>
@@ -88,12 +88,12 @@
 
 
 
-    @section Scripts {
-        @Scripts.Render("~/bundles/jqueryval")
-        <script src="~/Scripts/popper.js"></script>
-        <script src="~/Scripts/jquery-3.4.1.min.js"></script>
-        <script src="~/Scripts/bootstrap.min.js"></script>
-        <script src="~/Scripts/main.js"></script>
-    }
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/popper.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/main.js"></script>
+}
 
 

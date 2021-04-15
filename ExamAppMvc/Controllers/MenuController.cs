@@ -22,12 +22,13 @@ namespace ExamAppMvc.Controllers
         public ActionResult SubMenu(int? id)
         {
             ViewBag.Class = db.SubjectClassTopics.Where(x => x.SubjectId == id).ToList().Select(x => x.Class);
+           
             return View();
         }
         public ActionResult Topic(int? id)
         {
             ViewBag.Topic = db.SubjectClassTopics.Where(x => x.ClassId == id).ToList();
-
+            
             return View();
         }
         protected override void Dispose(bool disposing)

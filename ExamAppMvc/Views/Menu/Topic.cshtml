@@ -8,11 +8,38 @@
 @foreach (var i in ViewBag.topic)
 {
    
-    <div class="card">
-        <a href="@Url.Action("Index","Answers",new { id=i.Id})" style="text-decoration: none; color: black;">
-            <div class="container">
-                <h4><b>@i.Topic</b></h4>
-            </div>
-        </a>
-    </div>
+   
 }
+<div class="container">
+    <div class="row text-center">
+        @foreach (var i in ViewBag.topic)
+        {
+
+            <div class="card">
+
+                <div class="col-md-3 col-sm-6">
+                   
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3 style="margin-top: 10px;">@i.Topic</h3>
+                            <span class="badge">@i.QuestionAnswer.Count</span>
+
+                        </div>
+                        <div>
+                            @if (i.QuestionAnswer.Count != 0)
+                            {
+
+                                <a class="btn btn-danger" href="@Url.Action("Index","Answers",new { id=i.Id})">Start</a>
+
+                            }
+                        </div>
+                    </div>
+                        
+                </div>
+            </div>
+            @*</a>*@
+
+
+        }
+    </div>
+</div>

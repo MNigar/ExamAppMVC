@@ -137,11 +137,11 @@
     <Compile Include="Areas\Manage\Controllers\SubjectClassTopicsController.cs" />
     <Compile Include="Areas\Manage\Controllers\SubjectsController.cs" />
     <Compile Include="Context\ExamContext.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AnswersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\QuestionAnswersController.cs" />
-    <Compile Include="Controllers\Result.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Filter\Auth.cs" />
     <Compile Include="Global.asax.cs">
@@ -178,6 +178,10 @@
     <Compile Include="Migrations\202104140742332_added fields.cs" />
     <Compile Include="Migrations\202104140742332_added fields.Designer.cs">
       <DependentUpon>202104140742332_added fields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104150603257_added results.cs" />
+    <Compile Include="Migrations\202104150603257_added results.Designer.cs">
+      <DependentUpon>202104150603257_added results.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DbModel\Answer.cs" />
@@ -2171,6 +2175,7 @@
     <Content Include="Views\QuestionAnswers\Edit.cshtml" />
     <Content Include="Views\QuestionAnswers\Index.cshtml" />
     <Content Include="Views\Answers\Result.cshtml" />
+    <Content Include="Views\Admin\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2214,6 +2219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104140742332_added fields.resx">
       <DependentUpon>202104140742332_added fields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104150603257_added results.resx">
+      <DependentUpon>202104150603257_added results.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

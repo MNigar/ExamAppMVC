@@ -4,11 +4,24 @@
     ViewBag.Title = "Index";
 }
 <style>
-    .upperleft {
-        display: block;
-        text-align: left;
-        vertical-align: top;
+    .question {
+        padding: 10px 0px;
     }
+
+        .question .title {
+            padding: 8px;
+            background-color: antiquewhite;
+            color: black;
+            margin-bottom: 20px;
+            line-height: 2;
+            border-top: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .question .answers {
+            list-style-type: square ;
+        }
+
 </style>
 <h2>Index</h2>
 @using (Html.BeginForm("Result", "Answers", new { id = Model.Id}))
@@ -31,7 +44,7 @@
                     <li>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="@item.ID" id="optionsRadios1" value="A" />
+                                <input type="radio" name="@item.ID" id="1" value="A" />
                                 A) @item.A
                             </label>
                         </div>
@@ -43,7 +56,7 @@
                     <li>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="@item.ID" id="optionsRadios1" value="B" />
+                                <input type="radio" name="@item.ID" id="1" value="B" />
                                 B) @item.B
                             </label>
                         </div>
@@ -55,7 +68,7 @@
                     <li>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="@item.ID" id="optionsRadios1" value="C" />
+                                <input type="radio" name="@item.ID" id="1" value="C" />
                                 C) @item.C
                             </label>
                         </div>
@@ -67,30 +80,19 @@
                     <li>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="@item.ID" id="optionsRadios1" value="D" />
+                                <input type="radio" name="@item.ID" id="1" value="D" />
                                 D) @item.D
                             </label>
                         </div>
                     </li>
                 }
-                @*@if (item.E != null)
-                {
-
-                    <li>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="@item.ID" id="optionsRadios1" value="E" />
-                                E) @item.E
-                            </label>
-                        </div>
-                    </li>
-                }*@
+               
 
             </ul>
         </div>
         i++;
     }
-    <button type="submit" class="btn btn-primary">Tamamla</button>
+    <button type="submit" class="btn btn-primary">Check Your Answers</button>
 
 
 }

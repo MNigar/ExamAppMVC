@@ -1,7 +1,62 @@
-﻿
+﻿@model ExamAppMvc.Models.DbModel.Result
+
 @{
     ViewBag.Title = "Result";
 }
 
 <h2>Result</h2>
 
+<div>
+    <h4>Result</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrueAnswers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrueAnswers)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FalseAnswers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FalseAnswers)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmptyAnswers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmptyAnswers)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPoint)
+        </dt>
+
+        <dd>
+           <lable>@ViewBag.Total</lable>
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

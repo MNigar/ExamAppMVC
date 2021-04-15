@@ -166,14 +166,16 @@ namespace ExamAppMvc.Controllers
             //{
             //    sual.Add(key, Request.Form.Get(key));
             //}
+            string email = Session["email"].ToString();
+            int userId = db.Users.Where(x => x.Email == email).FirstOrDefault().Id;
             foreach (QuestionAnswer question in topic.QuestionAnswer.ToList())
             {       
                 if (sual.ContainsKey(question.ID.ToString()))
                 {
-                    result.QuestionId = id;
+                    result.QuestionId = question.ID;
                     result.SubjectId = topic.SubjectId;
                     result.SubjectClassTopicId = topic.Id;
-
+                    result.UserId = userId;
                     if (sual[question.ID.ToString()].ToString() == question.TrueAnswer)
                     {
                         result.TrueAnswers++;
@@ -189,7 +191,21 @@ namespace ExamAppMvc.Controllers
                 {
                     result.EmptyAnswers++;
                 }
+                                          
+                db.Results.Add(result);
+                db.SaveChanges();
             }
+            
+            int totalResult = (result.FalseAnswers + result.EmptyAnswers) / 4;
+            if (totalResult >= 1)
+            {
+                ViewBag.Total = result.TotalPoint - 1 * totalResult;
+            }
+            else
+            {
+                ViewBag.Total = result.TotalPoint;
+            }
+
             //string[] keys = Request.Form.AllKeys;
             //for (int i = 0; i < keys.Length; i++)
             //{
