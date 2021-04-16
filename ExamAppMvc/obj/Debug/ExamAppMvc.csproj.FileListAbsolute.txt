@@ -186,3 +186,5 @@ D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.ad
 D:\C#course\.net mvc\ExamAppMvc\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedresults.resources
 D:\C#course\.net mvc\ExamAppMvc\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedsurnamefield.resources
 D:\C#course\.net mvc\ExamAppMvc\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedsurnamefields.resources
+D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedsurnamefield.resources
+D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedsurnamefields.resources

@@ -1,16 +1,13 @@
 ﻿
 @{
-    ViewBag.Title = "Topic";
+    ViewBag.Title = "Topics";
 }
 
-<h2>Topic</h2>
+<h2>Topics</h2>
 
-@foreach (var i in ViewBag.topic)
-{
-   
-   
-}
+
 <div class="container">
+  
     <div class="row text-center">
         @foreach (var i in ViewBag.topic)
         {
@@ -18,7 +15,7 @@
             <div class="card">
 
                 <div class="col-md-3 col-sm-6">
-                   
+
                     <div class="thumbnail">
                         <div class="caption">
                             <h3 style="margin-top: 10px;">@i.Topic</h3>
@@ -34,7 +31,7 @@
                             }
                         </div>
                     </div>
-                        
+
                 </div>
             </div>
             @*</a>*@

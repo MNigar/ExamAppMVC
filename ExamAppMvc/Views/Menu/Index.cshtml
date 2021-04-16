@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+  
 }
 <style>
     /*.card {*/
@@ -20,7 +20,9 @@
     }*/
 </style>
 <br />
+
 <div class="container">
+    <h2>Subjects</h2>
     <div class="row text-center">
         @foreach (var i in ViewBag.Subject)
         {
@@ -34,7 +36,7 @@
                         <div class="thumbnail">
                             <div class="caption">
                                 <h3 style="margin-top: 10px;">@i.Name</h3>
-                            
+
                             </div>
                         </div>
                     </a>
