@@ -151,7 +151,7 @@ namespace ExamAppMvc.Controllers
         }
 
         [HttpPost]
-        public ActionResult Result(int id,Dictionary<string,object> sual)
+        public ActionResult Result(int id,Dictionary<string,object> questionDict)
         {
             SubjectClassTopic topic = db.SubjectClassTopics.Find(id);
                 
@@ -164,7 +164,7 @@ namespace ExamAppMvc.Controllers
 
 
 
-            Request.Form.CopyTo(sual);
+            Request.Form.CopyTo(questionDict);
             Result result = new Result();
             //Dictionary<string, string> sual = new Dictionary<string, string>();
             //foreach (string key in HttpContext.Request.Form.Keys)
@@ -179,10 +179,10 @@ namespace ExamAppMvc.Controllers
                 result.SubjectId = topic.SubjectId;
                 result.SubjectClassTopicId = topic.Id;
                 result.UserId = userId;
-                if (sual.ContainsKey(question.ID.ToString()))
+                if (questionDict.ContainsKey(question.ID.ToString()))
                 {
                    
-                    if (sual[question.ID.ToString()].ToString() == question.TrueAnswer)
+                    if (questionDict[question.ID.ToString()].ToString() == question.TrueAnswer)
                     {
                         result.TrueAnswers++;
                         result.TotalPoint += question.Point;
