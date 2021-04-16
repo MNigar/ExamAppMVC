@@ -144,6 +144,7 @@
     <Compile Include="Controllers\QuestionAnswersController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Filter\Auth.cs" />
+    <Compile Include="Filter\AuthForAdmin.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -182,6 +183,14 @@
     <Compile Include="Migrations\202104150603257_added results.cs" />
     <Compile Include="Migrations\202104150603257_added results.Designer.cs">
       <DependentUpon>202104150603257_added results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104160831286_added surname field.cs" />
+    <Compile Include="Migrations\202104160831286_added surname field.Designer.cs">
+      <DependentUpon>202104160831286_added surname field.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104160837314_added surname fields.cs" />
+    <Compile Include="Migrations\202104160837314_added surname fields.Designer.cs">
+      <DependentUpon>202104160837314_added surname fields.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DbModel\Answer.cs" />
@@ -2222,6 +2231,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104150603257_added results.resx">
       <DependentUpon>202104150603257_added results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104160831286_added surname field.resx">
+      <DependentUpon>202104160831286_added surname field.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104160837314_added surname fields.resx">
+      <DependentUpon>202104160837314_added surname fields.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

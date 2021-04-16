@@ -1,4 +1,5 @@
 ﻿using ExamAppMvc.Context;
+using ExamAppMvc.Filter;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Web.Mvc;
 
 namespace ExamAppMvc.Areas.Manage.Controllers
 {
+    [AuthForAdmin]
     public class MenuController : Controller
     {
         private ExamContext db = new ExamContext();

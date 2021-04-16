@@ -20,6 +20,11 @@ namespace ExamAppMvc.Controllers
         {
             //var answers = db.Answers.Include(a => a.Question).Where(x=>x.Question.SubjectClassTopicId==id);
             //ViewBag.Question = db.Questions.Where(x=>x.SubjectClassTopicId==id).ToList();
+            if (Session["username"] == null)
+            {
+                TempData["Message"] = "Please login for exam";
+                return RedirectToAction("Login", "Users");
+            }
             SubjectClassTopic topic = db.SubjectClassTopics.Find(id);
             if (topic == null)
             {
@@ -148,9 +153,9 @@ namespace ExamAppMvc.Controllers
         [HttpPost]
         public ActionResult Result(int id,Dictionary<string,object> sual)
         {
-            SubjectClassTopic topic = db.SubjectClassTopics.Find(id)
-                ;
-            //Request.
+            SubjectClassTopic topic = db.SubjectClassTopics.Find(id);
+                
+           
 
 
             var path=Request.FilePath;
@@ -160,7 +165,7 @@ namespace ExamAppMvc.Controllers
 
 
             Request.Form.CopyTo(sual);
-            Models.DbModel.Result result = new Models.DbModel.Result();
+            Result result = new Result();
             //Dictionary<string, string> sual = new Dictionary<string, string>();
             //foreach (string key in HttpContext.Request.Form.Keys)
             //{
@@ -169,13 +174,14 @@ namespace ExamAppMvc.Controllers
             string email = Session["email"].ToString();
             int userId = db.Users.Where(x => x.Email == email).FirstOrDefault().Id;
             foreach (QuestionAnswer question in topic.QuestionAnswer.ToList())
-            {       
+            {
+                result.QuestionId = question.ID;
+                result.SubjectId = topic.SubjectId;
+                result.SubjectClassTopicId = topic.Id;
+                result.UserId = userId;
                 if (sual.ContainsKey(question.ID.ToString()))
                 {
-                    result.QuestionId = question.ID;
-                    result.SubjectId = topic.SubjectId;
-                    result.SubjectClassTopicId = topic.Id;
-                    result.UserId = userId;
+                   
                     if (sual[question.ID.ToString()].ToString() == question.TrueAnswer)
                     {
                         result.TrueAnswers++;
@@ -196,27 +202,24 @@ namespace ExamAppMvc.Controllers
                 db.SaveChanges();
             }
             
-            int totalResult = (result.FalseAnswers + result.EmptyAnswers) / 4;
-            if (totalResult >= 1)
+            int totalWrong= (result.FalseAnswers + result.EmptyAnswers) / 4;
+            if (totalWrong >= 1)
             {
-                ViewBag.Total = result.TotalPoint - 1 * totalResult;
+                ViewBag.Total = result.TotalPoint - 1 * totalWrong;
+                if (ViewBag.Total < 0)
+                {
+                    ViewBag.Total = 0;
+                }
             }
             else
             {
                 ViewBag.Total = result.TotalPoint;
             }
 
-            //string[] keys = Request.Form.AllKeys;
-            //for (int i = 0; i < keys.Length; i++)
-            //{
-            //    output += keys[i] + ": " + Request.Form.Get(i) + "<br>"; 
-            //}
+           
 
-            //foreach (KeyValuePair<int,string> item in sual)
-            //{
-            //    output += item.Key + ": " + item.Value + "<br>";
-            //}
-
+            var fullName = db.Users.Where(x => x.Id == userId).FirstOrDefault();
+            ViewBag.FullName = fullName.Name + " " + fullName.Surname;
             return View(result);
         }
 

@@ -7,10 +7,12 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ExamAppMvc.Context;
+using ExamAppMvc.Filter;
 using ExamAppMvc.Models.DbModel;
 
 namespace ExamAppMvc.Areas.Manage.Controllers
 {
+    [AuthForAdmin]
     public class QuestionAnswersController : Controller
     {
         private ExamContext db = new ExamContext();
@@ -38,9 +40,10 @@ namespace ExamAppMvc.Areas.Manage.Controllers
         }
 
         // GET: Manage/QuestionAnswers/Create
-        public ActionResult Create(int id)
+        public ActionResult Create(/*int id*/)
         {
-            ViewBag.SubjectClassTopicId = id;
+            ViewBag.Topic = db.SubjectClassTopics.ToList();
+
             return View();
         }
 
@@ -49,7 +52,7 @@ namespace ExamAppMvc.Areas.Manage.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Text,Answer1,Answer2,Answer3,TrueAnswer,SubjectClassTopicId")] QuestionAnswer questionAnswer)
+        public ActionResult Create( QuestionAnswer questionAnswer)
         {
             if (ModelState.IsValid)
             {
@@ -58,7 +61,9 @@ namespace ExamAppMvc.Areas.Manage.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            //ViewBag.SubjectClassTopicId1 = new SelectList(db.SubjectClassTopics, "Id", "Topic");
 
+           
             ViewBag.SubjectClassTopicId = new SelectList(db.SubjectClassTopics, "Id", "Topic", questionAnswer.SubjectClassTopicId);
             return View(questionAnswer);
         }

@@ -9,18 +9,10 @@
 <div>
     <h4>Result</h4>
     <hr />
+    <h2>Congratulations   @ViewBag.FullName your exam is over</h2>
+   
     <dl class="dl-horizontal">
-        
 
-        <dt>
-            @Html.DisplayNameFor(model => model.UserId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.UserId)
-        </dd>
-
-       
 
         <dt>
             @Html.DisplayNameFor(model => model.TrueAnswers)
@@ -51,7 +43,7 @@
         </dt>
 
         <dd>
-           <lable>@ViewBag.Total</lable>
+            <lable>@ViewBag.Total</lable>
         </dd>
 
     </dl>

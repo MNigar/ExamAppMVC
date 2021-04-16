@@ -16,8 +16,11 @@ namespace ExamAppMvc.Models.DbModel
         [Required]
         [EmailAddress]
         public string Email { get; set; }
+                  
+        public string Surname { get; set; }
         [Required]
         public string Password { get; set; }
+
         public virtual List <Exam> UserSubjectTopicClasses { get; set; }
         public virtual List<UserAnswer> UserAnswers { get; set; }
         public virtual List<NewUserAnswer> NewUserAnswers { get; set; }

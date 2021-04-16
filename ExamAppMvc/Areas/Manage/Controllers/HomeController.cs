@@ -9,7 +9,7 @@ namespace ExamAppMvc.Areas.Manage.Controllers
 {
     public class HomeController : Controller
     {
-        [Auth]
+        [AuthForAdmin]
         // GET: Manage/Home
         public ActionResult Index()
         {

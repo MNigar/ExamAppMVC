@@ -21,7 +21,7 @@ namespace ExamAppMvc.Controllers
         }
         public ActionResult SubMenu(int? id)
         {
-            ViewBag.Class = db.SubjectClassTopics.Where(x => x.SubjectId == id).ToList().Select(x => x.Class);
+            ViewBag.Class = db.SubjectClassTopics.Where(x => x.SubjectId == id).ToList().Select(x => x.Class).Distinct();
            
             return View();
         }

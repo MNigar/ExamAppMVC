@@ -23,7 +23,15 @@
     @Html.AntiForgeryToken()
     <section class="ftco-section">
         <div class="container">
+            @if (TempData["Message"] != null)
+            {
+            <div class="alert alert-danger" role="alert">
+                @TempData["Message"]
+            </div>
+              
+            }
             <div class="row justify-content-center">
+
                 <div class="col-md-6 text-center mb-5">
                     <h2 class="heading-section">Login</h2>
                 </div>
@@ -40,7 +48,7 @@
                             <h4>User</h4>
                             <hr />
                             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                            
+
                             <div class="form-group">
                                 @*<input type="text" class="form-control rounded-left" placeholder="Username" name="Email" required>*@
                                 @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control rounded-left", @placeholder = "Email" } })
@@ -50,7 +58,7 @@
 
                             <div class="form-group d-flex">
                                 @*<input type="password" class="form-control rounded-left" placeholder="Password" name="Password" required>*@
-                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control rounded-left", @placeholder = "Password",@type="password" } })
+                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control rounded-left", @placeholder = "Password", @type = "password" } })
                                 @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
 
                             </div>
@@ -77,6 +85,14 @@
                                 </div>
                                 Session["LoginError"] = null;
                             }
+                            @if (TempData["PasswordError"] != null)
+                            {
+                        <div class="alert alert-danger" role="alert">
+                            @TempData["PasswordError"] 
+                        </div>
+                                Session["LoginError"] = null;
+                            }
+                         
                         </div>
                     </div>
                 </div>

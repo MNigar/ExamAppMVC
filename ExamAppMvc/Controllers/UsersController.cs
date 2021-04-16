@@ -27,13 +27,14 @@ namespace ExamAppMvc.Controllers
         
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Email,Password,Name")] User user)
+        public ActionResult Create( User user)
         {
             if (ModelState.IsValid)
             {
                 user.Password = Crypto.HashPassword(user.Password);
 
                 var check = db.Users.Where(u => u.Email == user.Email).FirstOrDefault();
+
                 if (check == null)
                 {
 
@@ -60,7 +61,7 @@ namespace ExamAppMvc.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login([Bind(Include = "Id,Email,Password,Name")] User user)
+        public ActionResult Login( User user)
         {
              if (ModelState.IsValid)
                 {
@@ -73,16 +74,21 @@ namespace ExamAppMvc.Controllers
                         {
                             Session["email"] = check.Email;
                             Session["username"] = check.Name;
-                        if (Session["username"].ToString() == "admin")
-                        {
-                            return View("~/Areas/Manage/Views/Home/Index.cshtml");
-                        }
-                        else
-                        {
+                        Session["userId"] = check.Id;
+                        //if (Session["username"].ToString() == "admin")
+                        //{
+                        //    return View("~/Areas/Manage/Views/Home/Index.cshtml");
+                        //}
+                        //else
+                        //{
                             return RedirectToAction("Index", "Menu");
-                        }
+                        //}
                        
                         }
+                    else
+                    {
+                        TempData["PasswordError"] = "Invalid password";
+                    }
 
                     }
                     else

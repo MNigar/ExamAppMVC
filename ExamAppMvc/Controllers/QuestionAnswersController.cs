@@ -49,7 +49,7 @@ namespace ExamAppMvc.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Text,Answer1,Answer2,Answer3,TrueAnswer,SubjectClassTopicId")] QuestionAnswer questionAnswer)
+        public ActionResult Create([Bind(Include = "ID,Text,A,Answer2,Answer3,TrueAnswer,SubjectClassTopicId")] QuestionAnswer questionAnswer)
         {
             if (ModelState.IsValid)
             {
