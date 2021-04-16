@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 
 namespace ExamAppMvc.Controllers
-{   [Auth]
+{   
     public class MenuController : Controller
     {
         // GET: Menu

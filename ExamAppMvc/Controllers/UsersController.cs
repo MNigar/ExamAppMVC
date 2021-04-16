@@ -54,6 +54,13 @@ namespace ExamAppMvc.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ActionResult Logout()
+        {
+            Session["email"] = null;
+            Session["username"] = null;
+            return RedirectToAction("Login", "Users");
+        }
         public ActionResult Login()
         {
             return View();

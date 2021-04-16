@@ -7,10 +7,12 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ExamAppMvc.Context;
+using ExamAppMvc.Filter;
 using ExamAppMvc.Models.DbModel;
 
 namespace ExamAppMvc.Areas.Manage.Controllers
 {
+    [AuthForAdmin]
     public class SubjectClassTopicsController : Controller
     {
         private ExamContext db = new ExamContext();

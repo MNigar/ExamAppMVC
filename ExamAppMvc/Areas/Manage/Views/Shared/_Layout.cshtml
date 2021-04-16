@@ -100,7 +100,7 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            @*<li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                    aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
@@ -118,7 +118,7 @@
                         <a class="collapse-item" href="blank.html">Blank Page</a>
                     </div>
                 </div>
-            </li>
+            </li>*@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
@@ -139,12 +139,7 @@
                     <span>Topic</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="@Url.Action("Index","Questions",new { Area = "Manage" })">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Question</span>
-                </a>
-            </li>
+           
             <li class="nav-item">
                 <a class="nav-link" href="@Url.Action("Index","QuestionAnswers",new { Area = "Manage" })">
                     <i class="fas fa-fw fa-chart-area"></i>
@@ -373,11 +368,16 @@
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Activity Log
                                 </a>
-                                <div class="dropdown-divider"></div>
+                                @*<div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
-                                </a>
+                                </a>*@
+                                <div class="pull-right">
+                                    <div class="btn-group">
+                                        <a href="@Url.Action("Logout","Admin")" class="btn btn-success">Logout</a>
+                                    </div>
+                                </div>
                             </div>
                         </li>
 

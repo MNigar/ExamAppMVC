@@ -57,6 +57,15 @@ namespace ExamAppMvc.Controllers
             }
             return View();
         }
+      
+            [HttpGet]
+            public ActionResult Logout()
+            {
+                Session["email"] = null;
+                Session["username"] = null;
+                return RedirectToAction("Login", "Admin");
+            }
+        
         protected override void Dispose(bool disposing)
         {
             if (disposing)

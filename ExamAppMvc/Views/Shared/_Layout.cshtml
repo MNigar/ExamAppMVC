@@ -23,11 +23,22 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <div class="pull-right">
+                        <div class="btn-group">
+                            <a href="@Url.Action("Login","Users")" class="btn btn-success">Login</a>
+                        </div>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group">
+                            <a href="@Url.Action("Logout","Users")" class="btn btn-success">Logout</a>
+                        </div>
+                    </div>
                 </ul>
             </div>
         </div>
     </div>
     <div class="container body-content">
+       
         @RenderBody()
         <hr />
         <footer>
