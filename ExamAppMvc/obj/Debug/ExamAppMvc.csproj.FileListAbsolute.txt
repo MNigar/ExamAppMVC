@@ -188,3 +188,4 @@ D:\C#course\.net mvc\ExamAppMvc\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.added
 D:\C#course\.net mvc\ExamAppMvc\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedsurnamefields.resources
 D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedsurnamefield.resources
 D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.addedsurnamefields.resources
+D:\COVID1904\MVCProject\ExamAppMVC\ExamAppMvc\obj\Debug\ExamAppMvc.Migrations.deletetable.resources

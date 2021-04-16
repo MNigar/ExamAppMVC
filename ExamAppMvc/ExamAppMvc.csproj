@@ -192,21 +192,20 @@
     <Compile Include="Migrations\202104160837314_added surname fields.Designer.cs">
       <DependentUpon>202104160837314_added surname fields.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104160916294_delete table.cs" />
+    <Compile Include="Migrations\202104160916294_delete table.Designer.cs">
+      <DependentUpon>202104160916294_delete table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\DbModel\Answer.cs" />
     <Compile Include="Models\DbModel\BaseClass.cs" />
-    <Compile Include="Models\DbModel\NewUserAnswer.cs" />
-    <Compile Include="Models\DbModel\Question.cs" />
     <Compile Include="Models\DbModel\QuestionAnswer.cs" />
     <Compile Include="Models\DbModel\Result.cs" />
     <Compile Include="Models\DbModel\Subject.cs" />
     <Compile Include="Models\DbModel\Class.cs" />
-    <Compile Include="Models\DbModel\SubjectClass.cs" />
     <Compile Include="Models\DbModel\SubjectClassTopic.cs" />
     <Compile Include="Models\DbModel\Topic.cs" />
     <Compile Include="Models\DbModel\User.cs" />
     <Compile Include="Models\DbModel\Exam.cs" />
-    <Compile Include="Models\DbModel\UserAnswer.cs" />
     <Compile Include="Models\ViewModel\QuestionAnswerViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -2237,6 +2236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104160837314_added surname fields.resx">
       <DependentUpon>202104160837314_added surname fields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104160916294_delete table.resx">
+      <DependentUpon>202104160916294_delete table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

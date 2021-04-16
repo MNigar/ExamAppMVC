@@ -7,7 +7,7 @@ namespace ExamAppMvc.Models.ViewModel
 {
     public class QuestionAnswerViewModel
     {
-        public Question Question { get; set; }
-        public Answer Answer { get; set; }
+        //public Question Question { get; set; }
+        //public Answer Answer { get; set; }
     }
 }
